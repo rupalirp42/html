@@ -1,0 +1,39 @@
+<html>
+
+<head>
+    <title>Practice</title>
+</head>
+
+<body>
+    <label>Number A</label>
+    <input type="number" id="numA">
+    <label>Number B</label>
+    <input type="number" id="numB">
+    <label>Number C</label>
+    <input type="number" id="numC">
+    <br>
+    <br>
+
+    <input type="button" value="Compare" onclick="compare()">
+    <div id="output"></div>
+
+    <script>
+        function compare() {
+            let a = Number(document.getElementById("numA").value);
+            let b = Number(document.getElementById("numB").value);
+            let c = Number(document.getElementById("numC").value);
+
+            if (a > b && a > c) {
+                document.getElementById("output").innerHTML = "A is Greater";
+            } else if (b > a && b > c) {
+                document.getElementById("output").innerHTML = "B is Greater"
+            } else if (c > a && c > b) {
+                document.getElementById("output").innerHTML = "C is Greater";
+            } else {
+                document.getElementById("output").innerHTML = "All numbers are same."
+            }
+        }
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,61 @@
+<html>
+
+
+<head>
+    <title>1Object</title>
+    <style>
+        table,
+        tr,
+        th,
+        td {
+            border: 1px solid #dddddd
+        }
+    </style>
+</head>
+
+<body>
+    <div>
+        <label>Name</label>
+        <input type="text" id="cName">
+
+        <label>Age</label>
+        <input type="number" id="cAge">
+
+        <label>Relation</label>
+        <input type="text" id="cRelation">
+    </div>
+    <br>
+
+    <div>
+        <input type="button" value="Submit" onclick="relationChart()">
+    </div>
+    <br>
+
+    <table>
+        <tr>
+            <th>Name</th>
+            <th>Age</th>
+            <th>Relation</th>
+        </tr>
+        <tr>
+            <td id="Name"></td>
+            <td id="Age"></td>
+            <td id="Relation"></td>
+        </tr>
+    </table>
+    <script>
+        function relationChart() {
+            let chart = {
+                name: document.getElementById("cName").value,
+                age: document.getElementById("cAge").value,
+                relation: document.getElementById("cRelation").value,
+            };
+            document.getElementById("Name").innerHTML = chart.name;
+            document.getElementById("Age").innerHTML = chart.age;
+            document.getElementById("Relation").innerHTML = chart.relation;
+        };
+    </script>
+
+</body>
+
+</html>

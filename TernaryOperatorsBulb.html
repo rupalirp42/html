@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <title>Ternary Operators Bulb</title>
+</head>
+
+<body>
+    <!-- <input type="button" value="Bulb OFF" onclick="turnOff()">
+    <img src="D:\images\bulbOff.gif" id="image">
+    <input type="button" value="Bulb ON" onclick="turnOn()">
+
+    <script>
+        function turnOff() {
+            document.getElementById("image").src = "D:/images/bulbOff.gif";
+        }
+        function turnOn() {
+            document.getElementById("image").src = "D:/images/bulbOn.gif";
+        }
+    </script> -->
+
+
+
+
+
+
+    <img src="D:/images/bulbOff.gif" id="image">
+    <br>
+    <br>
+    <input type="button" value="Toggle" onclick="toggle()">
+    <script>
+
+        function toggle() {
+            let imagePath = document.getElementById("image").src;
+            let bulbStatus;
+
+
+            bulbStatus = imagePath == "file:///D:/images/bulbOff.gif" ? false : true;
+
+            document.getElementById("image").src = bulbStatus == false ? "D:/images/bulbOn.gif" : "D:/images/bulbOff.gif";
+
+
+            // let imagePath = document.getElementById("image").src;
+            // let bulbStatus;
+
+            // if (imagePath == "file:///D:/images/bulbOff.gif") {
+            //     bulbStatus=false;
+            // } else {
+            //     bulbStatus=true;
+            // }
+
+            // if (bulbStatus == false) {
+            //     document.getElementById("image").src = "D:/images/bulbOn.gif";
+            // } else {
+            //     document.getElementById("image").src = "D:/images/bulbOff.gif";
+            // }
+
+            // if (imagePath == "file:///D:/images/bulbOff.gif") {
+            //     document.getElementById("image").src = "D:/images/bulbOn.gif";
+            // } else {
+            //     document.getElementById("image").src = "D:/images/bulbOff.gif";
+            // }
+        }
+    </script>
+</body>
+
+</html>

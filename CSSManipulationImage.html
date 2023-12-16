@@ -1,0 +1,33 @@
+<html>
+  <head>
+    <title>CSS Manipulation Image</title>
+  </head>
+
+  <body>
+    <img
+      src="D:\images\3.jpg"
+      width="380px"
+      height="380px"
+      id="image"
+      onmouseenter="mEnter()"
+      onmouseup="mUp()"
+      onmousedown="mDown()"
+      onmouseleave="mLeave()"
+    />
+
+    <script>
+      function mEnter() {
+        document.getElementById("image").src = "D:/images/cat.jpg";
+      }
+      function mDown() {
+        document.getElementById("image").src = "D:/images/mouse.jpg";
+      }
+      function mUp() {
+        document.getElementById("image").src = "D:/images/elephant.jpg";
+      }
+      function mLeave() {
+        document.getElementById("image").src = "D:/images/3.jpg";
+      }
+    </script>
+  </body>
+</html>

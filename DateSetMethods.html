@@ -1,0 +1,58 @@
+<html>
+
+<head>
+    <title>Date Set Methods</title>
+</head>
+
+<body>
+    <h1>Date Set Methods...</h1>
+    <input type="button" value="Set Full Year" onclick="setFullYear()"><br><br>
+    <input type="button" value="Set Date" onclick="setDate()"><br><br>
+    <input type="button" value="Set Month" onclick="setMonth()"><br><br>
+    <input type="button" value="Set Hours" onclick="setHours()"><br><br>
+    <input type="button" value="Compare Date" onclick="compareDate()"><br><br>
+    <div id="output"></div>
+
+    <script>
+        function setFullYear() {
+            let setFullYear = new Date();
+            setFullYear.setFullYear(1996);
+            document.getElementById("output").innerHTML = setFullYear;
+        }
+
+        function setDate() {
+            let setDate = new Date();
+            setDate.setDate(setDate.getDate() + 50);
+            document.getElementById("output").innerHTML = setDate;
+        }
+
+        function setMonth() {
+            let setMonth = new Date();
+            setMonth.setMonth(11);
+            document.getElementById("output").innerHTML = setMonth;
+        }
+
+        function setHours() {
+            let setHours = new Date();
+            setHours.setHours(22);
+            document.getElementById("output").innerHTML = setHours;
+        }
+
+        function compareDate() {
+            let today = new Date();
+            let someDay = new Date();
+            someDay.setFullYear(2020, 2, 6);
+            if (today < someDay) {
+                text = "today is before 2020, 2, 6";
+            }
+            else {
+                text = "today is after 2020, 2,6";
+            }
+            document.getElementById("output").innerHTML = text;
+        }
+
+        
+    </script>
+</body>
+
+</html>

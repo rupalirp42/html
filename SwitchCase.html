@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Switch Case</title>
+</head>
+
+<body>
+    <input type="button" value="Get Date" onclick="date()"><br><br>
+    <input type="button" value="Get Month" onclick="months()"><br><br>
+    <div id="output"></div>
+
+    <script>
+        function date() {
+            let currentDate = new Date().getDay();
+            let daysArray = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thusday", "Friday", "Saturday"];
+
+            document.getElementById("output").innerHTML = daysArray[currentDate];
+
+            // let day = "";
+            // if (currentDate == 0) {
+            //     day = "Sunday";
+            // } else if (currentDate == 1) {
+            //     day = "Monday";
+            // } else if (currentDate == 2) {
+            //     day = "Tuesday";
+            // } else if (currentDate == 3) {
+            //     day = "Wednesday";
+            // } else if (currentDate == 4) {
+            //     day = "Thursday";
+            // } else if (currentDate == 5) {
+            //     day = "Friday";
+            // } else if (currentDate == 6) {
+            //     day = "Saturday";
+            // }
+
+            // switch (currentDate) {
+            //     case 0:
+            //         day = "Sunday";
+            //         break;
+            //     case 1:
+            //         day = "Monday";
+            //         break;
+            //     case 2:
+            //         day = "Tuesday";
+            //         break;
+            //     case 3:
+            //         day = "Wednesday";
+            //         break;
+            //     case 4:
+            //         day = "Thursday";
+            //         break;
+            //     case 5:
+            //         day = "Friday";
+            //         break;
+            //     case 6:
+            //         day = "Saturday";
+            //         break;
+            // }
+            // alert(day);
+            // document.getElementById("output").innerHTML = day;
+        }
+
+        function months() {
+            let currentMonth = new Date().getMonth();
+            let MonthsArray = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
+            document.getElementById("output").innerHTML = MonthsArray[currentMonth];
+        }
+    </script>
+</body>
+
+</html>

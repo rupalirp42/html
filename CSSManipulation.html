@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Manipulation</title>
+</head>
+
+<body>
+    <input type="button" value="Small" id="small" onmouseenter="mEnter()" onmouseleave="mLeave()">
+    <script>
+        function mEnter() {
+            document.getElementById("small").value = "Big";
+            document.getElementById("small").style.padding = "20px";
+        }
+
+        function mLeave() {
+            document.getElementById("small").value = "Small";
+            document.getElementById("small").style.padding = "0px";
+            
+        }
+
+    </script>
+
+</body>
+
+</html>

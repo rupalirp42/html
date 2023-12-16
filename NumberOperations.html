@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Number Operations</title>
+</head>
+
+<body>
+    <label>Number A:</label>
+    <input type="number" id="numA">
+    <label>Number B:</label>
+    <input type="number" id="numB">
+    <br>
+    <br>
+
+    <input type="button" value="Add" onclick="add()">
+    <input type="button" value="Subtract" onclick="subtract()">
+    <input type="button" value="Multiply" onclick="multiply()">
+    <input type="button" value="Divide" onclick="divide()">
+    <br>
+    <br>
+    <div id="output"></div>
+    <script>
+        function add() {
+            let a = Number(document.getElementById("numA").value);
+            let b = Number(document.getElementById("numB").value);
+            document.getElementById("output").innerHTML = a + b;
+        }
+        function subtract() {   
+            let a = Number(document.getElementById("numA").value);
+            let b = Number(document.getElementById("numB").value);
+            document.getElementById("output").innerHTML = a - b;
+        }
+        function multiply() {
+            let a = Number(document.getElementById("numA").value);
+            let b = Number(document.getElementById("numB").value);
+            document.getElementById("output").innerHTML = a * b;
+        }
+        function divide() {
+            let a = Number(document.getElementById("numA").value);
+            let b = Number(document.getElementById("numB").value);
+            document.getElementById("output").innerHTML = a / b;
+        }
+    </script>
+</body>
+
+</html>

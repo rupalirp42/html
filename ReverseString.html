@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Reverse string</title>
+</head>
+
+<body>
+    
+    <input type="button" value="Click" onclick="reverseWord()">
+    <br><br>
+    <div id="output"></div>
+
+    <script>
+        let reverseWord = () => {
+            let str = "itisveryeasy";
+            // let splitStr = str.split(" ");
+            // let newArr = [];
+            // for (let i = 0; i <= splitStr.length - 1; i++) {
+            //     let abced = splitStr[i].split("").reverse().join("");
+            //     newArr.push(abced);
+            //     // let reverseArry = splitStr.reverse();
+            // }
+            // let joinArry = newArr.join(" ");
+
+            document.getElementById("output").innerHTML = str.reverse();
+        }
+    </script>
+</body>
+
+</html>

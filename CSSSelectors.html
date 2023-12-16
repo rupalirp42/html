@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>CSS Selectors</title>
+    <style>
+        .b1 {
+            padding: 10px;
+            border-radius: 10px;
+        }
+    </style>
+</head>
+
+<body onload="alter()">
+    <input type="button" value="Button 1" class="b1">
+    <input type="button" value="Button 2" class="b1">
+    <input type="button" value="Button 3" class="b1">
+    <input type="button" value="Button 4" class="b1">
+<br><br>
+    <div>1</div>
+    <div>2</div>
+    <div>3</div>
+    <div>4</div>
+
+    <script>
+        function alter() {
+            for (let i = 0; i <= 3; i++) {
+                document.getElementsByClassName("b1")[i].style.backgroundColor = "pink";
+            }
+        }
+    </script>
+</body>
+
+</html>

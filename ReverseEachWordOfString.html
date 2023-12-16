@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reverse each word of string</title>
+    <style>
+        #clickButton {
+            padding: 10px;
+            border: 2px solid rgba(0, 0, 255, 0.842);
+            box-shadow: 3px 3px rgb(142, 142, 240);
+            border-radius: 20px;
+            color: red;
+            font-size: 20px;
+        }
+    </style>
+</head>
+
+<body>
+    <label>Enter Your String:</label>
+    <input type="text" id="inputString">
+    <br><br>
+    <input type="button" value="Click" onclick="reverseString()" id="clickButton">
+    <br><br>
+    <div id="output"></div>
+
+    <script>
+        let reverseString = () => {
+            let str = document.getElementById("inputString").value;
+
+            // let splitArry = str.split(' ');
+            // for (let i = 0; i < splitArry.length; i++) {
+            //     let word = splitArry[i];
+            //     let reverseWord = "";
+            //     for (let j = word.length - 1; j >= 0; j--) {
+            //         reverseWord = reverseWord + word[j];
+            //     }
+            //     splitArry[i] = reverseWord;
+            // }
+            // let reverseStr = splitArry.join(' ');
+
+            let reverseStr = str.split(" ").map(word => word.split("").reverse().join("")).join(" ");
+
+
+            document.getElementById("output").innerHTML = reverseStr;
+        }
+
+    </script>
+</body>
+
+</html>

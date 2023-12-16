@@ -1,0 +1,81 @@
+<html>
+
+<head>
+    <title>Using Switch Print 0 to 9 Numbers</title>
+</head>
+
+<body>
+    <label>Number</label>
+    <input type="text" id="num"><br><br>
+    <input type="button" value="print" onclick="print()"><br><br>
+    <div id="output"></div>
+    <script>
+        // function print() {
+        //     let numA = Number(document.getElementById("num").value);
+        //     switch (numA) {
+        //         case 0: document.getElementById("output").innerHTML = "Zero";
+        //             break;
+        //         case 1: document.getElementById("output").innerHTML = "One";
+        //             break;
+        //         case 2: document.getElementById("output").innerHTML = "Two";
+        //             break;
+        //         case 3: document.getElementById("output").innerHTML = "Three";
+        //             break;
+        //         case 4: document.getElementById("output").innerHTML = "Four";
+        //             break;
+        //         case 5: document.getElementById("output").innerHTML = "Five";
+        //             break;
+        //         case 6: document.getElementById("output").innerHTML = "Six";
+        //             break;
+        //         case 7: document.getElementById("output").innerHTML = "Seven";
+        //             break;
+        //         case 8: document.getElementById("output").innerHTML = "Eight";
+        //             break;
+        //         case 9: document.getElementById("output").innerHTML = "Nine";
+        //             break;
+        //     }
+        // }
+
+        // function print() {
+        //     let numA = Number(document.getElementById("num").value);
+        //     let arrayNumber = ["Zero", "One", "Two", "Three", "Four", "Five", "Six", "Seven", "Eight", "Nine"];
+
+        //     document.getElementById("output").innerHTML = arrayNumber[numA];
+        // }
+
+        // let print = () => {
+        //     let numA = Number(document.getElementById("num").value);
+
+        //     if(numA==0) {
+        //         document.getElementById("output").innerHTML="Zero";
+        //     } else if(numA==1) {
+        //         document.getElementById("output").innerHTML="One";
+        //     } else if(numA==2) {
+        //         document.getElementById("output").innerHTML="Two";
+        //     } else if(numA==3) {
+        //         document.getElementById("output").innerHTML="Three"
+        //     } else if(numA==4) {
+        //         document.getElementById("output").innerHTML="Four"
+        //     } else if(numA==5) {
+        //         document.getElementById("output").innerHTML="Five"
+        //     } else if(numA==6) {
+        //         document.getElementById("output").innerHTML="Six"
+        //     } else if(numA==7) {
+        //         document.getElementById("output").innerHTML="Seven"
+        //     } else if(numA==8) {
+        //         document.getElementById("output").innerHTML="Eight"
+        //     } else if(numA==9) {
+        //         document.getElementById("output").innerHTML="Nine"
+        //     }
+        // }
+
+        let print = () => {
+            let numA = Number(document.getElementById("num").value);
+
+            document.getElementById("output").innerHTML = numA == 0 ? "Zero" : numA == 1 ? "One" : numA == 2 ? "Two" : numA == 3 ? "Three" : numA == 4 ? "Four" : numA == 5 ? "Five" : numA == 6 ? "Six" : numA == 7 ? "Seven" : numA == 8 ? "Eight" : numA == 9 ? "Nine" : "break";
+        }
+    </script>
+
+</body>
+
+</html>

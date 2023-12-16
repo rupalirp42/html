@@ -1,0 +1,57 @@
+<htm>
+  <head>
+    <title>Practice Function</title>
+    <style>
+      table,
+      th,
+      tr,
+      td {
+        border: 1px solid #dddddd;
+      }
+
+      h1 {
+        color: red;
+      }
+    </style>
+  </head>
+
+  <body>
+    <h1>Hello Everyone</h1>
+    <div>
+      <label>Roll Name</label>
+      <input type="Number" id="rInput" />
+      <label>Student Name</label>
+      <input type="text" id="sInput" />
+      <label>Class</label>
+      <input type="text" id="cInput" />
+      <br />
+      <br />
+      <input type="button" value="Add" onclick="Add()" />
+    </div>
+    <br />
+
+    <table>
+      <tr>
+        <th>Roll No</th>
+        <th>Student Name</th>
+        <th>Class</th>
+      </tr>
+      <tr>
+        <td id="RollName">1</td>
+        <td id="StudentName">Rupali Patil</td>
+        <td id="Class">First</td>
+      </tr>
+    </table>
+
+    <script>
+      function Add() {
+        document.getElementById("RollName").innerHTML =
+          document.getElementById("rInput").value;
+        document.getElementById("StudentName").innerHTML =
+          document.getElementById("sInput").value;
+        document.getElementById("Class").innerHTML =
+          document.getElementById("cInput").value;
+      }
+    </script>
+  </body>
+</htm>

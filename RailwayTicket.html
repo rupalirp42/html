@@ -1,0 +1,141 @@
+<html>
+
+<head>
+    <title>IRCTC-Railway Ticket Booking site</title>
+    <link rel="stylesheet" type="text/css" href="D:\html\ExternalCSS.css">
+
+</head>
+
+<body>
+    <center>
+        <h1>IRCTC-Railway Ticket Booking Form</h1>
+    </center>
+
+    <div>
+        <label>Passenger Name</label>
+        <input type="text" id="passName">
+    </div>
+    <br>
+
+    <div>
+        <label>Gender</label>
+        <input type="radio" value="Male" name="gender">
+        <label>Male</label>
+        <input type="radio" value="Female" name="gender">
+        <label>Female</label>
+        <input type="radio" value="Other" name="gender">
+        <label>Other</label>
+    </div>
+    <br>
+
+    <div>
+        <label>Class</label>
+        <input type="radio" value="AC" name="class">
+        <label>AC</label>
+        <input type="radio" value="Sleeper" name="class">
+        <label>Sleeper</label>
+        <input type="radio" value="General" name="class">
+        <label>General</label>
+    </div>
+    <br>
+
+    <!-- <div>
+        <label>Form Station</label>
+        <Select name="Form Station" value="">
+            <option value="Mumbai">Mumbai</option>
+            <option value="Pune">Pune</option>
+            <option value="Delhi">Delhi</option>
+        </Select>
+    </div>
+    <br>
+
+    <div>
+        <label>To Station</label>
+        <select name="To Station" value="">
+            <option value="Surat">Surat</option>
+            <option value="Pune">Pune</option>
+            <option value="Delhi">Delhi</option>
+        </select>
+    </div>
+    <br> -->
+
+    <div>
+        <label>Journey Date</label>
+        <input type="date" id="journeyDate">
+    </div>
+    <br>
+    <div>
+        <input type="button" value="Add Passenger" onclick="addPass()">
+        <input type="button" value="Clear Data">
+    </div>
+    <br>
+
+    <table>
+        <tr>
+            <th>Sr No</th>
+            <th>Passenger Name</th>
+            <th>Gender</th>
+            <th>Class</th>
+            <th>Form</th>
+            <th>To</th>
+            <th>Journey Date</th>
+        </tr>
+
+        <tr id="myId">
+
+        </tr>
+
+    </table>
+    <br>
+
+    <div>
+        <input type="checkbox" value=""> I agree to terms & conditions. Take me to the
+        <a href="https://www.facebook.com/">Payment Page.</a>
+    </div>
+
+    <script>
+        function addPass() {
+            let passengers = [];
+            let passInfo = {
+                name: null,
+                gender: null,
+                class: null,
+                // fromStation: null,
+                // toStation: null,
+                journeyDate: null,
+            };
+            passInfo.name = document.getElementById("passName").value;
+            let genders = document.getElementsByName("gender");
+            for (let index = 0; index < genders.length; index++) {
+                if (genders[index].checked) {
+                    passInfo.gender = genders[index].value;
+                }
+            }
+            // passInfo.gender = document.getElementById("gender").value;
+            let classes = document.getElementsByName("class");
+            for (let index = 0; index < classes.length; index++) {
+                if (classes[index].checked) {
+                    passInfo.class = classes[index].value;
+                }
+            }
+            // passInfo.class = document.getElementById("class").value;
+            // passInfo.fromStation = document.getElementById("passName").value;
+            // passInfo.toStation = document.getElementById("passName").value;
+
+            passInfo.journeyDate = document.getElementById("journeyDate").value;
+            passengers.push(passInfo);
+
+            let myRow = document.getElementById("myId");
+
+
+            for (let index = 0; index <= passengers.length; index++) {
+                let myData = document.createElement("td");
+                myData.appendChild(document.createTextNode(passengers[index].value));
+                myList.appendChild(myData);
+            }
+        }
+    </script>
+
+</body>
+
+</html>

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Number Operations</title>
+</head>
+
+<body>
+    <label>Number A:</label>
+    <input type="number" id="numA">
+    <label>Number B:</label>
+    <input type="number" id="numB">
+    <br>
+    <br>
+
+    <input type="button" value="Add" onclick="operation('add')">
+    <input type="button" value="Subtract" onclick="operation('subtract')">
+    <input type="button" value="Multiply" onclick="operation('multiply')">
+    <input type="button" value="Divide" onclick="operation('divide')">
+    <br>
+    <br>
+    <div id="output"></div>
+    <script>
+        let operation = (param) => {
+            let a = Number(document.getElementById("numA").value);
+            let b = Number(document.getElementById("numB").value);
+
+            // if (param == "add") {
+            //     document.getElementById("output").innerHTML = a + b;
+            // } else if (param == "subtract") {
+            //     document.getElementById("output").innerHTML = a - b;
+            // } else if (param == "multiply") {
+            //     document.getElementById("output").innerHTML = a * b;
+            // } else if (param == "divide") {
+            //     document.getElementById("output").innerHTML = a / b;
+            // }
+
+            document.getElementById("output").innerHTML = param == "add" ? a + b : param == "subtract" ? a - b : param == "multiply" ? a * b : param == "divide" ? a / b : "Rupali";
+        }
+    </script>
+</body>
+
+</html>

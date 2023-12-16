@@ -1,0 +1,85 @@
+<html>
+
+<head>
+    <title> New File </title>
+    <style>
+        table,
+        tr,
+        th,
+        td {
+            border: 1px solid #dddddd
+        }
+
+        h1 {
+            color: brown
+        }
+    </style>
+
+</head>
+
+<body>
+    <h1>Welcome To Html</h1>
+
+    <div>
+        <a href="https://www.facebook.com/">Link to Facebook</a>
+    </div>
+
+    <div>
+        <label style="color:red"> Password </label>
+        <input type="text">
+        <label> User Name </label>
+        <input type="Password">
+    </div>
+    <br>
+
+    <div>
+        <label>Family</label>
+        <input type="checkbox" value="">
+        <label>Mother</label>
+        <input type="checkbox" value="">
+    </div>
+    <br>
+
+    <div>
+        <label>Family</label>
+        <input type="radio" value="" name="family">
+        <label>Mother</label>
+        <input type="radio" value="" name="family">
+        <label>Father</label>
+        <input type="radio" value="" name="family">
+    </div>
+    <br>
+
+    <div>
+        <label>Student Name</label>
+        <input type="text" id="input">
+        <br>
+        <br>
+        <input type="button" value="Add Student" onclick="student()">
+        <br>
+        <br>
+    </div>
+
+    <table>
+        <tr>
+            <th>Sr No</th>
+            <th>Student Name</th>
+            <th>Roll No</th>
+            <th>Class</th>
+        </tr>
+        <tr>
+            <th>1</th>
+            <th id="studentName">Rupali Patil</th>
+            <th>11</th>
+            <th>1st</th>
+        </tr>
+    </table>
+
+    <script>
+        function student() {
+            document.getElementById("studentName"). innerHTML = document.getElementById("input").value;
+        }
+    </script>
+</body>
+
+</html>

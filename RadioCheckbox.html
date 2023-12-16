@@ -1,0 +1,58 @@
+<div>
+    <h1>Display Radio Buttons</h1>
+    <p>Please select your favorite Web language:</p>
+
+    <input type="checkbox" name="fav_language" value="HTML" />
+    <label>HTML</label><br />
+
+    <input type="checkbox" name="fav_language" value="CSS" />
+    <label>CSS</label><br />
+
+    <input type="checkbox" name="fav_language" value="JavaScript" />
+    <label>JavaScript</label></br>
+
+    <input type="checkbox" name="fav_language" value="React" />
+    <label>React</label>
+
+    <br />
+    <div>
+        <p>Please select your age:</p>
+
+        <input type="radio" name="age" value="0-30" />
+        <label>0 - 30</label><br />
+
+        <input type="radio" name="age" value="31-60" />
+        <label>31 - 60</label><br />
+
+        <input type="radio" name="age" value="61-100" />
+        <label>61 - 100</label><br>
+
+        <input type="radio" name="age" value="101-110" />
+        <label>101 - 110</label><br /><br />
+    </div>
+
+    <input type="button" value="Alert" onclick="getInfo()" />
+    <script>
+        function getInfo() {
+            let languages = document.getElementsByName("fav_language");
+            let language = [];
+
+            for (let index = 0; index < languages.length; index++) {
+                if (languages[index].checked) {
+                    language.push(languages[index].value);
+                }
+            }
+
+            let ages = document.getElementsByName("age");
+            let age;
+            for (let index = 0; index < ages.length; index++) {
+                if (ages[index].checked) {
+                    age = ages[index].value;
+                }
+            }
+            alert(language + "," + age);
+        }
+    </script>
+    </body>
+
+    </html>

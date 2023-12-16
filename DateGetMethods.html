@@ -1,0 +1,87 @@
+<html>
+
+<head>
+    <title> Date Get Methods</title>
+</head>
+
+<body>
+    <h1 style="color: blue;">Date Get Methods...</h1>
+    <input type="button" value="Get Year" onclick="getYear()"><br><br>
+    <input type="button" value="Get Month" onclick="getMonth()"><br><br>
+    <input type="button" value="Get Day" onclick="getDay()"><br><br>
+    <input type="button" value="Get Date" onclick="getDate()"><br><br>
+    <input type="button" value="Get Hours" onclick="getHours()"><br><br>
+    <input type="button" value="Get Minutes" onclick="getMinutes()"><br><br>
+    <input type="button" value="Get Seconds" onclick="getSeconds()"><br><br>
+    <input type="button" value="Get Milliseconds" onclick="getMilliseconds()"><br><br>
+    <input type="button" value="Get Time" onclick="getTime()"><br><br>
+    <input type="button" value="Get Date Now" onclick="dateNow()"><br><br>
+
+    <div id="output"></div>
+
+    <script>
+
+        function getYear() {
+            let getYear = new Date("21 March 2010");
+            document.getElementById("output").innerHTML = getYear.getFullYear();
+        }
+
+        function getMonth() {
+            let getMonth = new Date("2012-12-3").getMonth();
+            let month = ["Jan", "Feb", "March", "April", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"];
+            let monthName = month[getMonth];
+
+            document.getElementById("output").innerHTML = monthName;
+        }
+
+        function getDay() {
+            let getDay = new Date("1996-2-4").getDay();
+            let dayArray = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
+            document.getElementById("output").innerHTML = dayArray[getDay];
+        }
+
+        function getDate() {
+            let getDate = new Date("2012-12-10");
+            document.getElementById("output").innerHTML = getDate.getDate();
+        }
+
+        function getHours() {
+            let getHours = new Date().getHours();
+            document.getElementById("output").innerHTML = getHours;
+        }
+
+        function getMinutes() {
+            let getMinutes = new Date().getMinutes();
+            document.getElementById("output").innerHTML = getMinutes;
+        }
+
+        function getSeconds() {
+            let getSeconds = new Date(2000 - 23 - 15).getSeconds();
+            document.getElementById("output").innerHTML = getSeconds;
+        }
+
+        function getMilliseconds() {
+            let getMilliseconds = new Date().getMilliseconds();
+            document.getElementById("output").innerHTML = getMilliseconds;
+        }
+
+        function getTime() {
+            let getTime = new Date().getTime();
+            document.getElementById("output").innerHTML = getTime;
+        }
+
+        function dateNow() {
+            let minutes = 1000 * 60;
+            let hours = minutes * 60;
+            let day = hours * 24;
+            let year = day * 365;
+
+            let dateNow = Math.round(Date.now() / year);
+
+            document.getElementById("output").innerHTML = dateNow;
+        }
+
+    </script>
+</body>
+
+</html>

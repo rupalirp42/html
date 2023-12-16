@@ -1,0 +1,45 @@
+body {
+  margin: 0;
+}
+#mainDiv {
+  display: flex;
+}
+#leftDiv {
+  flex: 1;
+}
+#rightDiv {
+  flex: 1.6;
+}
+#leftHeader,
+#rightHeader {
+  height: 82px;
+  padding: 40px 40px 0px;
+  border: 1px solid gray;
+}
+#image {
+  height: inherit;
+}
+#leftBody,
+#rightBody {
+  height: 250px;
+  padding: 40px;
+  border: 1px solid gray;
+}
+#leftFooter,
+#rightFooter {
+  height: 82px;
+  padding: 0px 40px 40px;
+  border: 1px solid gray;
+}
+@media screen and (max-width: 538px) {
+  #mainDiv {
+    display: block;
+  }
+  #leftBody,
+  #leftFooter {
+    display: none;
+  }
+  #leftHeader, #rightHeader, #rightBody, #rightFooter {
+    padding: 0px
+  }
+}

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cooking</title>
+</head> 
+
+<body>
+    <input type="text" id="input">
+    <input type="button" value="Submit" onclick="addItem()">
+    <div>
+        <ul id="myList"></ul>
+    </div><br><br>
+    <input type="button" value="Submit" onclick="getItem()">
+    Today's Menu: <span id="output"></span>
+
+    <script>
+        let items = [];
+        let addItem = () => {
+            let input = document.getElementById("input").value;
+            items.push(input);
+            document.getElementById("myList").innerHTML = "";
+            let myList = document.getElementById("myList");
+            for (let i = 0; i < items.length; i++) {
+                let listItem = document.createElement("li");
+                listItem.appendChild(document.createTextNode(items[i]));
+                myList.appendChild(listItem);
+            }
+        }
+        let getItem = () => {
+            document.getElementById("output").innerHTML = items[Math.trunc((Math.random()) * items.length)];
+        }
+    </script>
+
+</body>
+
+</html>

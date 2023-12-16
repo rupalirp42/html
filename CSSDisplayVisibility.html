@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Display Visibility</title>
+</head>
+
+<body>
+    <img src="D:\images\3.jpg" width="350px" id="image"><br><br>
+    <input type="button" value="Hide" id="myButton" onclick="toggle()">
+
+    <script>
+        function toggle() {
+            document.getElementById("image").style.display = "none";
+            document.getElementById("image").style.visibility = "hidden";
+
+            // let buttonValue = document.getElementById("myButton").value;
+
+            // if (buttonValue == "Hide") {
+            //     document.getElementById("image").style.visibility = "hidden";
+            //     document.getElementById("myButton").value = "Show";
+            // } else {
+            //     document.getElementById("image").style.visibility = "visible";
+            //     document.getElementById("myButton").value = "Hide";
+            // }
+
+            // switch (buttonValue) {
+            //     case "Hide":
+            //         document.getElementById("image").style.display = "none";
+            //         document.getElementById("myButton").value = "Show";
+            //         break;
+            //     case "Show":
+            //         document.getElementById("image").style.display = "block";
+            //         document.get.buttonValue("myButton").value = "Hide";
+            //         break;
+            // }
+        }
+
+    </script>
+
+</body>
+
+</html>

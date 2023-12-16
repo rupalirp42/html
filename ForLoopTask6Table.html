@@ -1,0 +1,33 @@
+<html>
+
+<head>
+    <title> For Loop Task Table</title>
+</head>
+
+<body>
+    <input type="number" id="num">
+    <br>
+    <br>
+    <input type="button" value="Get Table" onclick="table()">
+    <ul id="myUl"></ul>
+
+    <script>
+        function table() {
+            let print = "";
+            let a = document.getElementById("num").value;
+            let tableA = document.getElementById("myUl");
+
+            for (let i = 1; i <= 10; i++) {
+
+                print += a * i + "<br>";
+
+                let b = document.createElement("li");
+                b.appendChild(document.createTextNode(i));
+                tableA.appendChild(b);
+            }
+            document.getElementById("b").innerHTML = print;
+        }
+    </script>
+</body>
+
+</html>

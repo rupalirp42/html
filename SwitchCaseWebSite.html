@@ -1,0 +1,58 @@
+<html>
+
+<head>
+    <title>Web Site</title>
+</head>
+
+<body>
+    <input type="text" id="webSite"><br><br>
+    <input type="button" value="Visit" onclick="visitIfElse()"> &nbsp;&nbsp;
+    <input type="button" value="Visit" onclick="visitSwitch()">
+
+    <script>
+        function visitIfElse() {
+            let webSiteA = document.getElementById("webSite").value;
+
+            if (webSiteA == "g") {
+                window.open("https://www.google.com");
+            } else if (webSiteA == "f") {
+                window.open("https://www.facebook.com/login/");
+            } else if (webSiteA == "y") {
+                window.open("https://www.youtube.com/");
+            } else if (webSiteA == "w") {
+                window.open("https://www.w3schools.com/");
+            } else if (webSiteA == "x") {
+                window.open("https://www.xperate.com/");
+            } else {
+                alert("Invalid Input");
+            }
+        }
+
+
+        // function visitSwitch() {
+        //     let webSiteA = document.getElementById("webSite").value;
+
+        //     switch (webSiteA) {
+        //         case "g":
+        //             window.open("https://www.google.com");
+        //             break;
+        //         case "f":
+        //             window.open("https://www.facebook.com/login/");
+        //             break;
+        //         case "y":
+        //             window.open("https://www.youtube.com/");
+        //             break;
+        //         case "w":
+        //             window.open("https://www.w3schools.com/");
+        //             break;
+        //         case "x":
+        //             window.open("https://www.xperate.com/");
+        //             break;
+        //         default:
+        //             alert("Wrong Input");
+        //     }
+        // }
+    </script>
+</body>
+
+</html>

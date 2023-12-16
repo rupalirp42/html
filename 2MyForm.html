@@ -1,0 +1,185 @@
+<html>
+
+<head>
+    <title>My Form</title>
+    <style>
+        table,
+        th,
+        tr,
+        td {
+            border: 1px solid #dddddd;
+        }
+    </style>
+</head>
+
+<body>
+    <h1 style="color: rgb(238, 74, 74)">Employee Registration Form</h1>
+
+    <label>Initial:</label>
+
+    <input type="radio" class="mr">
+    <label>Mr.</label>
+
+    <input type="radio" class="mr">
+    <label>Mrs.</label>
+
+    <input type="radio" class="mr">
+    <label>Ms.</label>
+    <br>
+    <br>
+
+    <label>First Name:</label>
+    <input type="text" id="firstN">
+    <br>
+    <br>
+    <label>Middle Name:</label>
+    <input type="text" id="middleN">
+    <br>
+    <br>
+    <label>Last Name:</label>
+    <input type="text" id="lastN">
+    <br>
+    <br>
+    <label>Gender:</label>
+    <input type="radio" name="gender">
+    <label>Male</label>
+    <input type="radio" name="gender">
+    <label>Female</label>
+    <input type="radio" name="gender">
+    <label>Other</label>
+    <br>
+    <br>
+    <label>Contact No:</label>
+    <input type="text" id="contNo">
+    <br>
+    <br>
+    <label>Email ID:</label>
+    <input type="text" id="emailId">
+    <br>
+    <br>
+
+    <label>City:</label>
+    <select name="City" id="city">
+        <option id="city">Pune</option>
+        <option id="city">Nagar</option>
+        <option id="city">Nashik</option>
+        <option id="city">Jalgoan</option>
+        <option id="city">Mumbai</option>
+    </select>
+    <br>
+    <br>
+
+    <label>State:</label>
+    <select name="State" id="state">
+        <option id="state">Maharastra</option>
+        <option id="state">Gujarat</option>
+        <option id="state">Uttar Pradesh</option>
+        <option id="state">Madhya Pradesh</option>
+        <option id="state">Himachal Pradesh</option>
+    </select>
+    <br>
+    <br>
+
+    <label>Upload Photo:</label>
+    <input type="button" value="Browser">
+    <br>
+    <br>
+
+    <label>Comments:</label>
+    <input type="text" id="comments">
+    <br>
+    <br>
+
+    <a href="D:\html\Lists.html">Help</a>
+    <br>
+    <br>
+
+    <input type="button" value="Submit" onclick="submit()">
+    <input type="button" value="Cancel">
+    <br>
+    <br>
+
+    <table>
+        <tr>
+            <th>Initial</th>
+            <th>First Name</th>
+            <th>Middle Name</th>
+            <th>Last Name</th>
+            <th>Gender</th>
+            <th>Contact No</th>
+            <th>Email ID</th>
+            <th>City</th>
+            <th>State</th>
+            <th>Upload Photo</th>
+            <th>Comments</th>
+        </tr>
+
+        <tr>
+            <td>Ms</td>
+            <td>Rupali</td>
+            <td>Ravindra</td>
+            <td>Patil</td>
+            <td>Female</td>
+            <td>9890181294</td>
+            <td>rupali@gmail.com</td>
+            <td>Pune</td>
+            <td>Maharashtra</td>
+            <td>take from Browser</td>
+            <td>i am an engineer.</td>
+        </tr>
+
+        <tr>
+            <td id="Initial"></td>
+            <td id="FirstName"></td>
+            <td id="middleName"></td>
+            <td id="lastName"></td>
+            <td id="gen"></td>
+            <td id="contactNo"></td>
+            <td id="emailID"></td>
+            <td id="City"></td>
+            <td id="State"></td>
+            <td id="UploadPhoto"></td>
+            <td id="Comments"></td>
+        </tr>
+    </table>
+
+    <script>
+        function submit() {
+            document.getElementById("Initial").innerHTML =
+                document.getElementsByClassName("mr").value;
+
+            document.getElementById("FirstName").innerHTML =
+                document.getElementById("firstN").value;
+
+            document.getElementById("middleName").innerHTML =
+                document.getElementById("middleN").value;
+
+            document.getElementById("lastName").innerHTML =
+                document.getElementById("lastN").value;
+
+            // document.getElementById("gen").innerHTML =
+            //     document.getElementById("gender").value;
+
+            document.getElementById("contactNo").innerHTML =
+                document.getElementById("contNo").value;
+
+            document.getElementById("emailID").innerHTML =
+                document.getElementById("emailId").value;
+
+            document.getElementById("City").innerHTML =
+                document.getElementById("city").value;
+
+            document.getElementById("State").innerHTML =
+                document.getElementById("state").value;
+
+            // document.getElementById("UploadPhoto").innerHTML =
+            //     document.getElementById("state").value;
+
+            document.getElementById("Comments").innerHTML =
+                document.getElementById("comments").value;
+        }
+    </script>
+
+</body>
+
+</html>

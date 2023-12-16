@@ -1,0 +1,65 @@
+<html>
+
+<head>
+    <title>Date Methods</title>
+</head>
+
+<body>
+    <h1 style="color: purple;">Date Methods</h1>
+    <input type="button" value="Current Date" onclick="date()"><br><br>
+    <input type="button" value="New Date" onclick="newDate()"><br><br>
+    <input type="button" value="Get Specific New Date" onclick="getSpeciifcNewDate()"><br><br>
+    <input type="button" value="Get previous Century year" onclick="previousCentury()"><br><br>
+    <input type="button" value="Get Date As Number" onclick="storeDateAsNumber()"><br><br>
+    <input type="button" value="Get Date Ausing To String Method" onclick="dateUsingToStringMethod()"><br><br>
+    <div id="output"></div>
+
+    <script>
+        function date() {
+            // Date() used for current date.
+            let currentDate = Date();
+            document.getElementById("output").innerHTML = currentDate;
+        }
+
+        function newDate() {
+            // new Date("its used for required date")
+            let newDate = new Date("2023-01-22");
+            document.getElementById("output").innerHTML = newDate;
+        }
+
+        function getSpeciifcNewDate() {
+            // 7 numbers specify year, month, day, hour, minute, second, and millisecond (in that order):
+            let newDate = new Date(96, 1, 4, 11, 23, 0, 20);
+            document.getElementById("output").innerHTML = newDate;
+        }
+
+        function previousCentury() {
+            // Two digit years will be interpreted as 19..
+            let previousCenturyDate = new Date(99, 3, 22);
+            document.getElementById("output").innerHTML = previousCenturyDate;
+        }
+
+        function storeDateAsNumber() {
+            // JavaScript stores dates as number of milliseconds since January 01, 1970.
+            // let storeDateAsNumber = new Date(86400000);
+            // let storeDateAsNumber = new Date(24 * 60 * 60 * 1000);
+            let storeDateAsNumber = new Date(0);
+            document.getElementById("output").innerHTML = storeDateAsNumber;
+        }
+
+        function dateUsingToStringMethod() {
+            // // dates using the toString() method. This is a string representation of the date
+            // let dateUsingToStringMethod = new Date();
+            // document.getElementById("output").innerHTML = dateUsingToStringMethod.toString();
+            
+            // The toDateString() method converts a date to a more readable format:
+            let dateUsingToStringMethod = new Date();
+            document.getElementById("output").innerHTML = dateUsingToStringMethod.toDateString();
+
+        }
+
+
+    </script>
+</body>
+
+</html>

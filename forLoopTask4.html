@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>For Loop Task 4</title>
+</head>
+
+<body>
+    <input type="button" value="Run" onclick="run()">
+    <br>
+    <br>
+    <div id="output"></div>
+    <script>
+        function run() {
+            let p = "";
+            for (let i = 1; i <= 5; i++) {
+                for (let k = 1; k <= 5-i; k++) {
+                    p += "&nbsp" + "&nbsp";
+                }   
+
+                for (let j = 1  ; j <= i; j++) {
+                    p += "*";
+                }
+                p += "<br>";
+            }
+            document.getElementById("output").innerHTML = p;
+        }
+
+    </script>
+
+</body>
+
+</html>

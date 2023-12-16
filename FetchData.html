@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fetch Data</title>
+</head>
+
+<body>
+    <div>Id:
+        <input type="number" id="inputId">
+    </div>
+    <input type="button" value="Get Info" onclick="getInfo()"><br><br>
+
+    <div>Name:<span id="name"></span> </div>
+    <div>Phone:<span id="phone"></span> </div>
+    <div>Website:<span id="website"></span> </div>
+    <div>Zip Code:<span id="zipCode"></span> </div>
+
+    <script>
+        let getInfo = async () => {
+            let input = Number(document.getElementById("inputId").value);
+
+            // let result2 = await fetch(`https://jsonplaceholder.typicode.com/users/${input}`)
+            //     .then(response => response.json());
+
+            let result = await fetch(`https://jsonplaceholder.typicode.com/users/${input}`);
+            let result2 = await result.json();
+
+            document.getElementById("name").innerHTML = result2.name;
+            document.getElementById("phone").innerHTML = result2.phone;
+            document.getElementById("website").innerHTML = result2.website;
+            document.getElementById("zipCode").innerHTML = result2.address.zipcode;
+        }
+    </script>
+
+</body>
+
+</html>

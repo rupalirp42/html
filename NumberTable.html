@@ -1,0 +1,88 @@
+<html>
+
+<head>
+    <title>Number Table</title>
+</head>
+
+<body>
+    <label>Enter a Number</label>
+    <input type="number" id="num">
+    <br>
+    <br>
+    <input type="button" value="Get the table" onclick="table()">
+<!-- 
+    <div id="outputA"></div>
+    <div id="outputB"></div>
+    <div id="outputC"></div>
+    <div id="outputD"></div>
+    <div id="outputE"></div>
+    <div id="outputF"></div>
+    <div id="outputG"></div>
+    <div id="outputH"></div>
+    <div id="outputI"></div>
+    <div id="outputJ"></div> -->
+
+    <table>
+        <tr>
+            <td id="numA"></td>
+        </tr>
+        <tr>
+            <td id="numB"></td>
+        </tr>
+        <tr>
+            <td id="numC"></td>
+        </tr>
+        <tr>
+            <td id="numD"></td>
+        </tr>
+        <tr>
+            <td id="numE"></td>
+        </tr>
+        <tr>
+            <td id="numF"></td>
+        </tr>
+        <tr>
+            <td id="numG"></td>
+        </tr>
+        <tr>
+            <td id="numH"></td>
+        </tr>
+        <tr>
+            <td id="numI"></td>
+        </tr>
+        <tr>
+            <td id="numJ"></td>
+        </tr>
+    </table>
+    <script>
+        
+        function table() {
+            let a = Number(document.getElementById("num").value);
+
+            // document.getElementById("outputA").innerHTML = (numA = 1 * a);
+            // document.getElementById("outputB").innerHTML = (numB = 2 * a);
+            // document.getElementById("outputC").innerHTML = (numC = 3 * a);
+            // document.getElementById("outputD").innerHTML = (numD = 4 * a);
+            // document.getElementById("outputE").innerHTML = (numE = 5 * a);
+            // document.getElementById("outputF").innerHTML = (numF = 6 * a);
+            // document.getElementById("outputG").innerHTML = (numG = 7 * a);
+            // document.getElementById("outputH").innerHTML = (numH = 8 * a);
+            // document.getElementById("outputI").innerHTML = (numI = 9 * a);
+            // document.getElementById("outputJ").innerHTML = (numJ = 10 * a);
+
+            document.getElementById("numA").innerHTML = (1 * a);
+            document.getElementById("numB").innerHTML = (2 * a);
+            document.getElementById("numC").innerHTML = (3 * a);
+            document.getElementById("numD").innerHTML = (4 * a);
+            document.getElementById("numE").innerHTML = (5 * a);
+            document.getElementById("numF").innerHTML = (6 * a);
+            document.getElementById("numG").innerHTML = (7 * a);
+            document.getElementById("numH").innerHTML = (8 * a);
+            document.getElementById("numI").innerHTML = (9 * a);
+            document.getElementById("numJ").innerHTML = (10 * a);
+        }
+
+    </script>
+</body>
+
+</html>

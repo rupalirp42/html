@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>For Loop</title>
+</head>
+
+<body>
+    <ul id="myList">
+
+    </ul>
+
+    <input type="button" value="Run" onclick="run()">
+
+    <script>
+        function run() {
+            let myList = document.getElementById("myList");
+            for (let i = 0; i < 5; i++) {
+                let listItem = document.createElement("li");
+                listItem.appendChild(document.createTextNode(i));
+                myList.appendChild(listItem);
+                // document.getElementById("myList").innerHTML = i;
+                // console.log(i);
+            }
+        }
+    </script>
+
+</body>
+
+</html>

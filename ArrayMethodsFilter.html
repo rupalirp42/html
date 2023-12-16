@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Array Methods Filter</title>
+</head>
+
+<body>
+    <input type="text" id="input" />
+    <input type="button" value="Filter" onclick="filterNames()" /><br /><br />
+    <div id="output1"></div>
+    <br /><br />
+    <div id="output2"></div>
+
+    <script>
+        let namesArray = [];
+        let filterNames = () => {
+            namesArray.push(document.getElementById("input").value);
+            document.getElementById("output1").innerHTML = namesArray;
+
+            // let arrayAnswer = namesArray.filter((name) => {
+            //     return name.length >= 5;
+            // })
+            // document.getElementById("output2").innerHTML = arrayAnswer;
+
+            // let arrayAnswer = namesArray.filter((name) => {
+            //     // return name.includes("l");
+
+            // })
+            // document.getElementById("output2").innerHTML = arrayAnswer;
+
+            // let arrayAnswer = namesArray.filter((name) => {
+            //     return name.indexOf("l") >= 0;
+            // })
+            // document.getElementById("output2").innerHTML = arrayAnswer;
+
+            // let arrayAnswer = namesArray.filter((name) => {
+            //     return name.startsWith("A");
+            // })
+            // document.getElementById("output2").innerHTML = arrayAnswer;
+
+            // let arrayAnswer = namesArray.filter((name) => {
+            //     return name.endsWith("i");
+            // })
+            // document.getElementById("output2").innerHTML = arrayAnswer;
+
+            // let arrayAnswer = namesArray.map((param) => {
+            //     return param + " Patil";
+            // })
+            // document.getElementById("output2").innerHTML = arrayAnswer;
+
+            let arrayAnswer = namesArray.map((param) => {
+                return param.split("")[0];
+            });
+            document.getElementById("output2").innerHTML = arrayAnswer;
+
+        };
+    </script>
+</body>
+
+</html>

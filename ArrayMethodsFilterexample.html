@@ -1,0 +1,31 @@
+<html>
+
+<head>
+    <title>Array Filter Methods Example</title>
+</head>
+
+<body>
+    <input type="button" value="Filter" onclick="arrayFilter()" /><br><br>
+    <div id="output" />
+    <script>
+        let arrayFilter = () => {
+            let arrayNames = ["Sonali", "Aditya", "Vedu", "Om", "Vaishnvi", "Disha", "Raj"];
+
+            let arrayAnswer = arrayNames.filter((param) => {
+                return param.length >= 5;
+            })
+            document.getElementById("output").innerHTML = arrayAnswer;
+        }
+
+        // let arrayFilter = () => {
+        //     let arrayNumbers = [123, 85, 0, 95, 25, 987456, 25987, 25, 35, 25, 40];
+
+        //     let arrayAnswer = arrayNumbers.filter((param) => {
+        //         return param <= 40;
+        //     })
+        //     document.getElementById("output").innerHTML = arrayAnswer;
+        // }
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Array String Methods</title>
+</head>
+
+<body>
+    <input type="text" id="input" />
+    <input type="button" value="Run" onclick="arrayString()" /><br /><br />
+    <div id="output1"></div><br /><br />
+    <div id="output2"></div>
+
+    <script>
+        let namesArray = [];
+
+        let arrayString = () => {
+                namesArray.push(document.getElementById("input").value);
+                document.getElementById("output1").innerHTML = namesArray;
+
+            // let arrayAnswer = namesArray.filter((name) => {
+            //     return name.length >= 5;
+            // });
+            // document.getElementById("output1").innerHTML = arrayAnswer;
+
+            // let arrayAnswer = namesArray.filter((name) => {
+            //     return name.indexOf("l") >= 0;
+            // })
+            // document.getElementById("output2").innerHTML = arrayAnswer;
+
+            // let arrayAnswer = namesArray.filter((param) => {
+            //     return param.includes("i");
+            // })
+            // document.getElementById("output2").innerHTML = arrayAnswer;
+
+            // let arrayAnswer = namesArray.filter((param) => {
+            //     return param.startsWith("R");
+            // })
+            // document.getElementById("output2").innerHTML = arrayAnswer;
+
+            let arrayAnswer = namesArray.filter((param) => {
+                return param.length;
+            })
+            document.getElementById("output2").innerHTML = arrayAnswer;
+
+        };
+    </script>
+</body>
+
+</html>

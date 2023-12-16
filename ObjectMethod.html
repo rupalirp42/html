@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Array Methods</title>
+  </head>
+  <body>
+    <div id="input"></div>
+
+    <input type="button" value="Submit" onclick="submit()" />
+
+    <script>
+      function submit() {
+        let x = {
+          sno: 1,
+          studentName: "Sonali",
+          class: "1st",
+          place: {
+            state: "Maharashtra",
+            country: "India",
+          },
+          subjects: ["Maths", "English", "Science"],
+        };
+
+        // x.place.state = "Maharashtra"
+
+        document.getElementById("input").innerHTML = JSON.stringify(x);
+      }
+    </script>
+  </body>
+</html>

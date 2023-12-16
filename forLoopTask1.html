@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>For Loop task 1</title>
+</head>
+
+<body>
+    <div id="output"></div>
+    <input type="button" value="Run" onclick="run()">
+
+    <script>
+        function run() {
+            let pattern = "";
+            for (let i = 0; i < 5; i++) {
+                for (let j = 0; j <= 15; j++) {
+                    pattern += "*";
+                }
+                pattern += "<br>";
+            }
+            document.getElementById("output").innerHTML = pattern;
+        }
+    </script>
+</body>
+
+
+</html>

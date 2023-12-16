@@ -1,0 +1,55 @@
+<html>
+
+<head>
+    <title>Average Number calculation</title>
+</head>
+
+<body>
+    <label>Number A</label>
+    <input type="number" id="numA">
+    <label>Number B</label>
+    <input type="number" id="numB">
+    <label>Number C</label>
+    <input type="number" id="numC">
+    <label>Number D</label>
+    <input type="number" id="numD">
+    <label>Number E</label>
+    <input type="number" id="numE">
+    <br>
+    <br>
+    <input type="button" value="Calculate Average" onclick="average()">
+    <br>
+    <br>
+    <div id="output"></div>
+
+    <script>
+        function average() {
+
+            let a = Number(document.getElementById("numA").value);
+            let b = Number(document.getElementById("numB").value);
+            let c = Number(document.getElementById("numC").value);
+            let d = Number(document.getElementById("numD").value);
+            let e = Number(document.getElementById("numE").value);
+
+            let divider = 1;
+            if(a && b) {
+               divider = 2;
+            }
+            if(a && b && c) {
+               divider = 3;
+            }
+            if (a && b && c && d) {
+                divider = 4;
+             }
+            if (a && b && c && d && e) {
+                divider = 5;
+            }
+
+            document.getElementById("output").innerHTML = ((a + b + c + d + e) / divider);
+
+        }
+    </script>
+
+</body>
+
+</html>

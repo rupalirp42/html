@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>CSS Box Model</title>
+</head>
+
+<body>
+    <!-- <input type="button" value="Button" style="
+        padding-right: 25px; padding-left: 15px;padding-top: 10px;padding-bottom: 40px;
+        border-top-left-radius: 10px;
+        border-top-right-radius: 25px;
+        border-bottom-right-radius: 50px;
+        border-bottom-left-radius: 30px;
+      " /> -->
+
+    <!-- <div style="padding:5px; border: 2px solid red; width: 50px;">Rupali</div>
+    <div style="padding:5px; border: 2px solid red; width: 50px; margin: 10px;">Rupali</div> -->
+
+    <!-- <input type="button" value="Change" id="change" onmouseenter="mEnter()" onmouseleave="mLeave()" style="background-color: pink;"> -->
+    
+    <input type="button" value="Change" id="change" onmousedown="mDown()" onmouseup="mUp()" style="background-color: pink;">
+
+    <script>
+        // function change() {
+        //     document.getElementById("change").value = "Rupali";
+        // }
+        // function mEnter() {
+        //     document.getElementById("change").style.backgroundColor = "red";
+        // }
+        // function mLeave() {
+        //     document.getElementById("change").style.backgroundColor = "blue";
+        // }
+        function mDown() {
+            document.getElementById("change").style.backgroundColor = "red";
+        }
+        function mUp() {
+            document.getElementById("change").style.backgroundColor = "blue";
+        }
+
+    </script>
+
+</body>
+
+</html>

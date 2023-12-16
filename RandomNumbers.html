@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Random Numbers</title>
+</head>
+
+<body>
+    <input type="button" value="Get Random Number" onclick="getRandomNumber()"
+        style="border-radius: 10px; background-color: blue;"><br><br>
+    <div id="output"></div>
+
+    <script>
+        function getRandomNumber() {
+            let randomNumber = Math.random();
+            document.getElementById("output").innerHTML = (randomNumber.toFixed(2) * 100);
+        }
+    </script>
+
+</body>
+
+</html>

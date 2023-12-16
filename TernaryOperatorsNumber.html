@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Ternary Operators Number</title>
+</head>
+
+<body>
+    <label>Number</label>
+    <input type="text" id="num">
+    <input type="button" value="Print" onclick="print()"><br><br>
+    <div id="output"></div>
+    <script>
+        function print() {
+            let numberA = Number(document.getElementById("num").value);
+            // let arrayNumber = ["Zero", "One", "Two", "Three", "Four", "Five", "Six", "Seven", "Eight", "Nine"];
+
+            // document.getElementById("output").innerHTML = arrayNumber[numberA];
+
+            switch (numberA) {
+                case 0: document.getElementById("output").innerHTML = "Zero";
+                    break;
+                case 1: document.getElementById("output").innerHTML = "One";
+                    break;
+                case 2: document.getElementById("output").innerHTML = "Two";
+                    break;
+                case 3: document.getElementById("output").innerHTML = "Three";
+                    break;
+            }
+            
+            // if (numberA == 0) {
+            // document.getElementById("output").innerHTML = "Zero";
+            // } else if (numberA == 1) {
+            //     document.getElementById("output").innerHTML = "One";
+            // } else if (numberA == 2) {
+            //     document.getElementById("output").innerHTML = "Two";
+            // } else if (numberA == 3) {
+            //     document.getElementById("output").innerHTML = "Three";
+            // }
+
+            // document.getElementById("output").innerHTML = numberA == 0 ? "Zero" : numberA == 1 ? "One" : numberA == 2 ? "Two" : numberA == 3 ? "Three": null;
+        }
+    </script>
+</body>
+
+</html>

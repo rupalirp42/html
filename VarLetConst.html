@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Array Methods</title>
+</head>
+
+<body>
+    <div id="output"></div>
+
+    <input type="button" value="Submit" onclick="submit()">
+
+    <script>
+        function submit() {
+            var x;
+            x = 25;
+            //This is ok.
+
+            x = 25;
+            var x;
+            //This is also ok.
+
+            let x;
+            x = 25;
+            // This is ok.
+            
+            x = 25;
+            let x;
+            // This gives initialisation error.
+            
+            const x = 25;
+            // This is ok.
+
+            // const x;
+            // x=25;
+            // // This gives Error. const must be declared and assigned in same line.
+
+            alert(x);
+        }
+    </script>
+</body>
+
+</html>

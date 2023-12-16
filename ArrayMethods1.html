@@ -1,0 +1,85 @@
+<html>
+
+<head>
+    <title>Array Methods</title>
+</head>
+
+<body>
+    <div id="output"></div><br><br>
+    <div id="output1"></div>
+    <br>
+    <br>
+    <input type="button" value="Submit" onclick="submit()">
+    <input type="button" value="To String" onclick="toStrings()">
+    <input type="button" value="Length" onclick="lengthA()">
+    <input type="button" value="Concatenat" onclick="concatenat()">
+    <input type="button" value="Flat" onclick="flat()">
+    <input type="button" value="Splice" onclick="splice()">
+    <input type="button" value="Slice" onclick="slice()">
+    <input type="button" value="Delete" onclick="deleteA()">
+    <input type="button" value="Join" onclick="join()">
+
+    <script>
+        function submit() {
+            let x = [5, 10, 15, 20, 25, 30, 35, 40];
+            // document.getElementById("output").innerHTML=x.length;
+            // document.getElementById("output").innerHTML=x[x.length - 1];
+
+            const myGirls = ["Cecilie", "Lone"];
+            const myBoys = ["Emil", "Tobias", "Linus"];
+            document.getElementById("output").innerHTML = [...myBoys, ...myGirls];
+        }
+
+        function toStrings() {
+            let a = ["Banana", "Apple", "Grapes", "Orange"];
+
+            document.getElementById("output").innerHTML = a.toString();
+        }
+
+        function lengthA() {
+            let a = ["Banana", "Apple", "Grapes", "Orange"];
+            document.getElementById("output").innerHTML = a;
+            document.getElementById("output1").innerHTML = a.length;
+        }
+
+        function concatenat() {
+            let a = [1, 2, 3, 4, 5, 6, 7];
+            let b = [8, 9, 10, 11, 12];
+
+            // document.getElementById("output").innerHTML = a.concat(b);
+            document.getElementById("output1").innerHTML = [...a, ...b];
+        }
+
+        function flat() {
+            let a = [["Apple", "Banana"], [11, 12], ["Orange", "Grapes"], [13, "Watermelon"]];
+            document.getElementById("output").innerHTML = a;
+            document.getElementById("output1").innerHTML = a.flat();
+        }
+
+        function splice() {
+            let a = ["Banana", "Apple", "Orange", "Watermelon"];
+            document.getElementById("output").innerHTML = a;
+            document.getElementById("output1").innerHTML = a.splice(2, 0, "Grapes", "Pineapple");
+        }
+
+        function slice() {
+            let a = ["Banana", "Apple", "Orange", "Watermelon"];
+            document.getElementById("output").innerHTML = a;
+            document.getElementById("output1").innerHTML = a.slice(2);
+        }
+
+        function deleteA() {
+            let a = ["Banana", "Apple", "Orange", "Watermelon"];
+            document.getElementById("output").innerHTML = a;
+            document.getElementById("output1").innerHTML = delete a[1];
+        }
+        function join() {
+            let a = ["Banana", "Apple", "Orange", "Watermelon"];
+            document.getElementById("output").innerHTML = a;
+            document.getElementById("output1").innerHTML = a.join("*");
+        }
+
+    </script>
+</body>
+
+</html>

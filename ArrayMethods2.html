@@ -1,0 +1,50 @@
+<html>
+
+<head>
+    <title>Me Array Methods</title>
+</head>
+
+<body onload="showDefault()">
+
+    <div id="input"></div>
+    <br>
+    <input type="text" id="inputString">
+    <br>
+    <br>
+    <input type="button" value="CollectPush" onclick="collectionPush()">
+    <input type="button" value="CollectPop" onclick="collectionPop()">
+    <input type="button" value="CollectUnshift" onclick="collectionUnshift()">
+    <input type="button" value="CollectShift" onclick="collectionShift()">
+
+    <script>
+        let x = [1, 2, 3, "Rupali", "Sonali"];
+        function showDefault() {
+            document.getElementById("input").innerHTML = x;
+        }
+        function collectionPush() {
+            // Add one input
+            x.push(document.getElementById("inputString").value);
+            document.getElementById("input").innerHTML = x;
+        }
+        function collectionPop() {
+            // drop one input
+            x.pop();
+            document.getElementById("input").innerHTML = x;
+        }
+        function collectionUnshift() {
+            // Add one input by left side
+            x.unshift(document.getElementById("inputString").value);
+            document.getElementById("input").innerHTML = (x);
+
+        }
+        function collectionShift() {
+            // delete one input by left side
+            x.shift();
+            document.getElementById("input").innerHTML = (x);
+        }
+
+    </script>
+
+</body>
+
+</html>
