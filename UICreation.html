@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>User Interface Creation form</title>
+    <style>
+        body {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 96vh;
+            width: 99vw;
+        }
+
+        .main {
+            height: 350px;
+            /* width: 800px; */
+            display: flex;
+            justify-content: center;
+        }
+
+        .create-user {
+            border: 1px solid black;
+            border-radius: 5px;
+            margin-right: 200px;
+            padding: 50px;
+        }
+
+        .users {
+            border: 1px solid black;
+            border-radius: 5px;
+            padding: 35px;
+            overflow-y: auto;
+        }
+
+        .head-2 {
+            text-align: center;
+            color: red;
+        }
+
+        .user-info {
+            border: 1px solid black;
+            padding: 5px;
+            border-radius: 5px;
+            margin-bottom: 1px;
+        }
+
+        .button-class {
+            text-align: right;
+        }
+
+        .type-info {
+            margin-bottom: 10px;
+            width: 100%;
+        }
+
+        .button-group {
+            margin-top: 30px;
+            text-align: center;
+        }
+
+        .my-button {
+            padding: 8px;
+            border-radius: 15px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="main">
+        <div class="create-user">
+            <div>
+                <h2 class="head-2">Create User</h2>
+            </div>
+            <div>
+                <form action="http://localhost:8080/create" method="post">
+                    <div class="type-info">
+                        <label>Name:</label>
+                        <input type="text" name="name">
+                    </div>
+                    <div class="type-info">
+                        <label>Age:</label>
+                        <input type="number" name="age">
+                    </div>
+                    <div class="type-info">
+                        <label>City:</label>
+                        <input type="text" name="city">
+                    </div>
+                    <div class="type-info">
+                        <label>Contact:</label>
+                        <input type="number" name="contact">
+                    </div>
+                    <div class="button-group"> <input type="reset" value="Reset" class="my-button">
+                        <input type="submit" value="Submit" class="my-button">
+                    </div>
+                </form>
+            </div>
+        </div>
+        <div class="users">
+            <h2 class="head-2">Users</h2>
+            <div class="user-info">Gopal Borse, 32, Pune, 9821564879
+                <div class="button-class">
+                    <span><img src="D:\frontEnd\html\Icons\Edit.svg"></span>
+                    <span><img src="D:\frontEnd\html\Icons\Delete.svg"></span>
+                </div>
+            </div>
+            <div class="user-info">Gopal Borse, 32, Pune, 9821564879
+                <div class="button-class">
+                    <span><img src="D:\frontEnd\html\Icons\Edit.svg"></span>
+                    <span><img src="D:\frontEnd\html\Icons\Delete.svg"></span>
+                </div>
+            </div>
+            <div class="user-info">Gopal Borse, 32, Pune, 9821564879
+                <div class="button-class">
+                    <span><img src="D:\frontEnd\html\Icons\Edit.svg"></span>
+                    <span><img src="D:\frontEnd\html\Icons\Delete.svg"></span>
+                </div>
+            </div>
+            <div class="user-info">Gopal Borse, 32, Pune, 9821564879
+                <div class="button-class">
+                    <span><img src="D:\frontEnd\html\Icons\Edit.svg"></span>
+                    <span><img src="D:\frontEnd\html\Icons\Delete.svg"></span>
+                </div>
+            </div>
+            <div class="user-info">Gopal Borse, 32, Pune, 9821564879
+                <div class="button-class">
+                    <span><img src="D:\frontEnd\html\Icons\Edit.svg"></span>
+                    <span><img src="D:\frontEnd\html\Icons\Delete.svg"></span>
+                </div>
+            </div>
+            <div class="user-info">Gopal Borse, 32, Pune, 9821564879
+                <div class="button-class">
+                    <span><img src="D:\frontEnd\html\Icons\Edit.svg"></span>
+                    <span><img src="D:\frontEnd\html\Icons\Delete.svg"></span>
+                </div>
+            </div>
+            <div class="user-info">Gopal Borse, 32, Pune, 9821564879
+                <div class="button-class">
+                    <span><img src="D:\frontEnd\html\Icons\Edit.svg"></span>
+                    <span><img src="D:\frontEnd\html\Icons\Delete.svg"></span>
+                </div>
+            </div>
+            <div class="user-info">Gopal Borse, 32, Pune, 9821564879
+                <div class="button-class">
+                    <span><img src="D:\frontEnd\html\Icons\Edit.svg"></span>
+                    <span><img src="D:\frontEnd\html\Icons\Delete.svg"></span>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
